@@ -120,6 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function hideDetail(id) {
     document.getElementById(id).classList.add('hidden');
   }
+  function hideDetail(detailId, scrollTarget) {
+    document.getElementById(detailId).classList.add("hidden");
+    document.getElementById(scrollTarget).scrollIntoView({ behavior: "smooth" });
+  }
   
   
   

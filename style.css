@@ -865,6 +865,66 @@ footer strong {
   .back-link:hover {
     text-decoration: underline;
   }
+  /* Fix layout on smaller screens */
+@media screen and (max-width: 768px) {
+    .tab-section-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tab-box {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .cert-detail-card, .edu-detail-card {
+      width: 100%;
+      max-width: 90%;
+      margin: 1rem auto;
+    }
+  
+    .cert-links, .edu-links {
+      padding: 0;
+      text-align: center;
+    }
+  
+    .cert-links li, .edu-links li {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  /* Improve hide button visibility */
+  .hide-btn {
+    color: #f58f7c;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    margin: 1rem auto;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  .hide-btn:hover {
+    text-decoration: underline;
+  }
+  
+  /* Scroll back to links after viewing */
+  .cert-detail-card,
+  .edu-detail-card {
+    position: relative;
+  }
+  
+  .cert-detail-card::after,
+  .edu-detail-card::after {
+    content: '← Hide';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #f58f7c;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
   
 
   
