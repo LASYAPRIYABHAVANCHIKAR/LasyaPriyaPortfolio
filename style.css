@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Comic Neue', sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  #hero {
+    background: linear-gradient(135deg, #f9e0e0, #fdf6f0);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  .highlight {
+    color: #f58f7c;
+    font-weight: bold;
+  }
+  
+  .typewriter {
+    font-size: 1.25rem;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    border-right: 2px solid #f58f7c;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #f58f7c; }
+  }
+  
+  .skill-tags span {
+    display: inline-block;
+    background-color: #ffe8e8;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+  
+  .art-gallery img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .art-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
