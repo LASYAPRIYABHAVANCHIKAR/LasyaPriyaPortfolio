@@ -2,78 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lasya Priya | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lasya Priya Bhavanchikar | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
-
-  <!-- 🎀 Hero Section -->
-  <section id="hero">
-    <h1>Hi, I am <span id="dynamic-text" class="typewriter"></span></h1>
-  </section>
-  
-
-  <!-- 💻 Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-tags">
-      <span>Java</span><span>React.js</span><span>Node.js</span><span>Cypress</span><span>MongoDB</span>
-      <span>HTML</span><span>CSS</span><span>Git</span><span>Postman</span><span>Jira</span>
+  <!-- Hero Section -->
+  <div id="particles-js"></div>
+  <section id="landing">
+    <div class="landing-content">
+      <h1>Hello, I'm</h1>
+      <h2 id="dynamic-name">Lasya Priya Bhavanchikar</h2>
+      <h3 id="role-text"></h3>
+      <div class="button-group">
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="BHAVANCHIKARLASYAPRIYARESUME.pdf" download class="btn">Download Resume</a>
+        <a href="https://github.com/LASYAPRIYABHAVANCHIKAR" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/lasyapriyabhavanchikar/" class="btn" target="_blank">LinkedIn</a>
+      </div>
+      <img src="coding-girl.png.png" alt="Girl coding" class="hero-image" />
     </div>
   </section>
 
-  <!-- 🛠️ Projects -->
+  <!-- About Me -->
+  <section id="about">
+    <h2>Who Am I?</h2>
+    <div class="about-container">
+      <img src="PIC LASYA.jpg" alt="Lasya's Photo" class="profile-img" />
+      <p>
+        I’m Lasya Priya Bhavanchikar, a passionate developer who blends creativity with code. Currently pursuing my MS in Computer Science at Pace University, I bring a strong foundation in full-stack development and software testing, with a flair for UI/UX design and a love for drawing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills & Tools -->
+  <div class="skills-icons">
+    <i class="devicon-html5-plain colored" title="HTML5"></i>
+    <i class="devicon-css3-plain colored" title="CSS3"></i>
+    <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+    <i class="devicon-react-original colored" title="React.js"></i>
+    <i class="devicon-java-plain colored" title="Java"></i>
+    <i class="devicon-spring-plain colored" title="Spring Boot"></i>
+    <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+    <i class="devicon-figma-plain colored" title="Figma"></i>
+    <i class="devicon-SQL-plain colored" title="SQL"></i>
+  </div>
+  
+
+  <!-- Certifications & Education -->
+  <section id="certifications">
+    <h2>Certifications & Education</h2>
+    <div class="cert-edu-container">
+      <div class="glass-card">
+        <h3>Certifications</h3>
+        <ul>
+          <li>Accenture Coding Simulation</li>
+          <li>Hewlett Packard Enterprise Forage</li>
+        </ul>
+      </div>
+      <div class="glass-card">
+        <h3>Education</h3>
+        <p>Pace University</p>
+        <p>MS in Computer Science (2023–2025)</p>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
-      <!-- Project cards go here -->
       <div class="project-card">
+        <img src="project1-placeholder.jpg" alt="Hearts and Paws" />
         <h3>Hearts and Paws</h3>
-        <p>Role: Software Tester</p>
-        <p>Tech Stack: Next.js, TypeScript, Cypress, Jenkins</p>
-        <a href="https://github.com/kt-codes-here/hearts-and-paws" target="_blank">🔗 View on GitHub</a>
+        <p><strong>Role:</strong> Software Tester</p>
+        <p><strong>Tech Stack:</strong> Cypress, Jenkins, Next.js</p>
+        <p>A full-stack pet adoption platform with robust testing flows.</p>
       </div>
       <div class="project-card">
-        <h3>SEW-SMART</h3>
-        <p>Role: Full Stack Developer</p>
-        <p>Tech Stack: React.js, Node.js, MongoDB, Express.js</p>
-        <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/full_stack_final_project" target="_blank">🔗 View on GitHub</a>
+        <img src="project2-placeholder.jpg" alt="SEW SMART" />
+        <h3>SEW–SMART</h3>
+        <p><strong>Role:</strong> Full Stack Developer</p>
+        <p><strong>Tech Stack:</strong> React.js, Node.js, MongoDB</p>
+        <p>An online tailoring service platform for client–tailor engagement.</p>
       </div>
       <div class="project-card">
+        <img src="project3-placeholder.jpg" alt="Meal Planner" />
         <h3>Meal Planner</h3>
-        <p>Role: Frontend Developer</p>
-        <p>Tech Stack: HTML, CSS, JavaScript, jQuery</p>
-        <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/mobile_web_content_final_project" target="_blank">🔗 View on GitHub</a>
+        <p><strong>Role:</strong> Frontend Developer</p>
+        <p><strong>Tech Stack:</strong> React.js, Firebase</p>
+        <p>A weekly nutrition tracker with customizable meal plans.</p>
       </div>
     </div>
   </section>
 
-  <!-- 🎓 Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <p>MS in Computer Science – Pace University</p>
-    <p>GPA: 3.8 (2023–2025)</p>
-  </section>
-
-  <!-- 🖼️ Artwork -->
+  <!-- LP Draws -->
   <section id="artwork">
-    <h2>My Art</h2>
+    <h2>LP Draws</h2>
     <div class="art-gallery">
-      <!-- Add your artwork images here -->
+      <img src="drawing 1.jpg" alt="Artwork 1" />
+      <img src="drawing 2.jpg" alt="Artwork 2" />
+      <img src="drawing 3.jpg" alt="Artwork 3" />
+      <img src="drawing 4.jpg" alt="Artwork 4" />
     </div>
   </section>
 
-  <!-- 📞 Contact -->
-  <section id="contact">
-    <h2>Let’s Connect</h2>
-    <p>Email: <a href="mailto:lasyapriya.bhavanchikar@pace.edu">lasyapriya.bhavanchikar@pace.edu</a></p>
-    <p>
-      <a href="https://github.com/LASYAPRIYABHAVANCHIKAR">GitHub</a> | 
-      <a href="https://www.linkedin.com/in/lasyapriyabhavanchikar/">LinkedIn</a>
-    </p>
+  <!-- Timeline -->
+  <section id="timeline">
+    <h2>My Timeline</h2>
+    <ul class="timeline">
+      <li><strong>2023–2025:</strong> MS in Computer Science, Pace University</li>
+      <li><strong>2024:</strong> Hearts and Paws – Software Testing</li>
+      <li><strong>2024:</strong> SEW–SMART – Full Stack Development</li>
+      <li><strong>2024:</strong> Meal Planner – Frontend Development</li>
+    </ul>
   </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <form action="mailto:lasyapriyafsd@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>LP</strong> &copy; All rights reserved.</p>
+  </footer>
+  <div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="script.js" defer></script>
 
 </body>
 </html>

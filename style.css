@@ -1,72 +1,280 @@
+/* ======== Google Fonts & Global Layout ======== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'Comic Neue', sans-serif;
-    background: linear-gradient(to right, #fdfbfb, #ebedee);
-    color: #333;
-    scroll-behavior: smooth;
-  }
-  
-  section {
-    padding: 4rem 2rem;
-    text-align: center;
-  }
-  
-  #hero {
-    background: linear-gradient(135deg, #f9e0e0, #fdf6f0);
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-  
-  .highlight {
-    color: #f58f7c;
-    font-weight: bold;
-  }
-  
-  .typewriter {
-    font-size: 1.25rem;
-    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-    border-right: 2px solid #f58f7c;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #f58f7c; }
-  }
-  
-  .skill-tags span {
-    display: inline-block;
-    background-color: #ffe8e8;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: #f5f5f5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00f7ff;
+}
+
+/* ======== Landing Section ======== */
+#landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.landing-content h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+#dynamic-name {
+  font-size: 2.8rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #00f7ff;
+  margin-bottom: 1rem;
+}
+
+#role-text {
+  font-size: 1.5rem;
+  color: #f58f7c;
+  border-right: 2px solid #f58f7c;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.button-group {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.7rem 1.4rem;
+  margin: 0.5rem;
+  background-color: #00f7ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f58f7c;
+  color: #fff;
+}
+
+.hero-image {
+  width: 300px;
+  margin-top: 2rem;
+}
+
+/* ======== About Section ======== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.profile-img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 247, 255, 0.2);
+}
+
+.about-container p {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* ======== Skills ======== */
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.skills-icons i {
+  font-size: 3rem;
+  color: #00ffe5;
+  transition: transform 0.3s ease;
+}
+
+.skills-icons i:hover {
+  transform: scale(1.2);
+  color: #f58f7c;
+}
+
+/* ======== Certifications & Education ======== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* ======== Projects ======== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  color: #f0f0f0;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* ======== LP Draws ======== */
+.art-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.art-gallery img {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.art-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ======== Timeline ======== */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  color: #ccc;
+}
+
+.timeline li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #00f7ff;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #00f7ff;
+  border-radius: 50%;
+}
+
+/* ======== Contact ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+button[type="submit"] {
+  background-color: #00f7ff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #f58f7c;
+  color: #fff;
+}
+
+/* ======== Footer ======== */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #0d1117;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+footer strong {
+  color: #00f7ff;
+}
+.cert-edu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    padding-top: 1rem;
   }
-  
-  .art-gallery img {
-    width: 200px;
-    margin: 10px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
   }
-  
-  .art-gallery img:hover {
-    transform: scale(1.05);
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
   
