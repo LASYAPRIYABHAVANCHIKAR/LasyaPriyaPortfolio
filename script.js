@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const roles = [
-      "Full Stack Developer",
-      "Software Engineer",
-      "UI/UX Designer",
-      "Software Tester"];
+      "Full Stack Developer ",
+      "Software Engineer ",
+      "UI/UX Designer ",
+      "Software Tester "];
   
     const roleText = document.getElementById("role-text");
     let roleIndex = 0;
@@ -72,4 +72,54 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "retina_detect": true
   });
+  function showCert(certId) {
+    document.querySelectorAll('.cert-detail-card').forEach(card => card.classList.add('hidden'));
+    document.getElementById(certId).classList.remove('hidden');
+  
+    // Scroll back to cert links
+    document.getElementById('certifications').scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-box').forEach(tab => tab.classList.add('hidden'));
+    document.getElementById(tabId).classList.remove('hidden');
+  
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    if (tabId === 'cert') {
+      document.querySelector('.tab-btn:nth-child(1)').classList.add('active');
+    } else {
+      document.querySelector('.tab-btn:nth-child(3)').classList.add('active');
+    }
+  }
+  function showEdu(eduId) {
+    document.querySelectorAll('.edu-detail-card').forEach(card => card.classList.add('hidden'));
+    document.getElementById(eduId).classList.remove('hidden');
+  
+    // Optional scroll into view
+    document.getElementById('education').scrollIntoView({ behavior: 'smooth' });
+  }
+  function showTab(tabName) {
+    document.querySelectorAll('.tab-box').forEach(tab => tab.classList.add('hidden'));
+    document.getElementById(tabName).classList.remove('hidden');
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    const activeIndex = tabName === 'cert' ? 0 : 1;
+    document.querySelectorAll('.tab-btn')[activeIndex].classList.add('active');
+  }
+  function showCert(id) {
+    document.querySelectorAll('#certifications .cert-detail-card').forEach(el => el.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  function showEdu(id) {
+    document.querySelectorAll('#education .cert-detail-card').forEach(el => el.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  function hideDetail(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+  
+  
   

@@ -12,6 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
@@ -25,8 +26,13 @@
       <div class="button-group">
         <a href="#contact" class="btn">Hire Me</a>
         <a href="BHAVANCHIKARLASYAPRIYARESUME.pdf" download class="btn">Download Resume</a>
-        <a href="https://github.com/LASYAPRIYABHAVANCHIKAR" class="btn" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/lasyapriyabhavanchikar/" class="btn" target="_blank">LinkedIn</a>
+        <a href="https://github.com/LASYAPRIYABHAVANCHIKAR" class="btn" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/lasyapriyabhavanchikar/" class="btn" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          
       </div>
       <img src="girlcoding.jpg" alt="Girl coding" class="hero-image" />
     </div>
@@ -113,24 +119,81 @@
   
   
   <!-- Certifications & Education -->
-  <section id="certifications">
+  <section id="edu-cert-tabs">
     <h2>Certifications & Education</h2>
-    <div class="cert-edu-container">
-      <div class="glass-card">
-        <h3>Certifications</h3>
-        <ul>
-          <li>Accenture Coding Simulation</li>
-          <li>Hewlett Packard Enterprise Forage</li>
+    <div class="edu-cert-flex">
+      
+      <!-- Certifications Column -->
+      <div class="edu-cert-col">
+        <h3 class="subhead">Certifications</h3>
+        <ul class="cert-links">
+          <li><a href="javascript:void(0)" onclick="showCert('cert-accenture')">Accenture NA Coding Simulation</a></li>
+          <li><a href="javascript:void(0)" onclick="showCert('cert-hpe')">HPE Software Engineering Simulation</a></li>
         </ul>
+  
+        <!-- Certificate Detail Cards -->
+        <div id="cert-accenture" class="cert-detail-card hidden">
+          <a href="javascript:void(0)" onclick="hideDetail('cert-accenture')" class="back-link">← Hide</a>
+          <h4>Accenture NA Coding Simulation</h4>
+          <img src="accenture.jpg" alt="Accenture Certificate" />
+          <p><strong>Role:</strong> Frontend Developer</p>
+          <p><strong>Time:</strong> 2024 – Completed via Forage</p>
+          <p>Completed Accenture’s coding simulation with real-world frontend tasks, issue tracking, and reporting.</p>
+        </div>
+  
+        <div id="cert-hpe" class="cert-detail-card hidden">
+          <a href="javascript:void(0)" onclick="hideDetail('cert-hpe')" class="back-link">← Hide</a>
+          <h4>HPE Software Engineering Simulation</h4>
+          <img src="hewlett.jpg" alt="HPE Certificate" />
+          <p><strong>Role:</strong> Software Engineering Intern</p>
+          <p><strong>Time:</strong> 2024 – Completed via Forage</p>
+          <p>Simulated agile tasks, project workflow, and development pipeline using JIRA and GitLab tools.</p>
+        </div>
       </div>
-      <div class="glass-card">
-        <h3>Education</h3>
-        <p>Pace University</p>
-        <p>MS in Computer Science (2023–2025)</p>
+  
+      <!-- Education Column -->
+      <div class="edu-cert-col">
+        <h3 class="subhead">Education</h3>
+        <ul class="cert-links">
+          <li><a href="javascript:void(0)" onclick="showEdu('edu-Masters')">Master's – Pace University</a></li>
+          <li><a href="javascript:void(0)" onclick="showEdu('edu-Btech')">B.Tech – SREC</a></li>
+          <li><a href="javascript:void(0)" onclick="showEdu('edu-Intermediate')">Intermediate – Rao's</a></li>
+          <li><a href="javascript:void(0)" onclick="showEdu('edu-SSC')">SSC – KRRS</a></li>
+        </ul>
+  
+        <!-- Education Detail Cards -->
+        <div id="edu-Masters" class="cert-detail-card hidden" style="background-image: url('pace.jpg'); background-size: cover;">
+          <a href="javascript:void(0)" onclick="hideDetail('edu-Masters')" class="back-link">← Hide</a>
+          <h4>Pace University – MS Computer Science</h4>
+          <p><strong>Location:</strong> NY, New York</p>
+          <p><strong>GPA:</strong> 3.8</p>
+        </div>
+  
+        <div id="edu-Btech" class="cert-detail-card hidden" style="background-image: url('btech-campus.jpg'); background-size: cover;">
+          <a href="javascript:void(0)" onclick="hideDetail('edu-Btech')" class="back-link">← Hide</a>
+          <h4>Santhiram Engineering College – B.Tech ECE</h4>
+          <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
+          <p><strong>CGPA:</strong> 7.23</p>
+        </div>
+  
+        <div id="edu-Intermediate" class="cert-detail-card hidden">
+          <a href="javascript:void(0)" onclick="hideDetail('edu-Intermediate')" class="back-link">← Hide</a>
+          <h4>Rao's Junior College</h4>
+          <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
+          <p><strong>CGPA:</strong> 8.23</p>
+        </div>
+  
+        <div id="edu-SSC" class="cert-detail-card hidden">
+          <a href="javascript:void(0)" onclick="hideDetail('edu-SSC')" class="back-link">← Hide</a>
+          <h4>Keshava Reddy Residential School</h4>
+          <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
+          <p><strong>CGPA:</strong> 9.3</p>
+        </div>
       </div>
+  
     </div>
-  </section>  
-
+  </section>
+  
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>

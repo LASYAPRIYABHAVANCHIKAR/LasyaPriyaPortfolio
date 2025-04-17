@@ -60,8 +60,7 @@ h2 {
 
 #role-text {
   font-size: 1.5rem;
-  color: #f58f7c;
-  border-right: 2px solid #f58f7c;
+  color:white;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -69,7 +68,10 @@ h2 {
 .button-group {
   margin-top: 1.5rem;
 }
-
+.btn i {
+    font-size: 1.4rem;
+  }
+  
 .btn {
   padding: 0.7rem 1.4rem;
   margin: 0.5rem;
@@ -166,17 +168,130 @@ h2 {
   
 
 /* ======== Certifications & Education ======== */
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #eee;
-  line-height: 1.6;
-}
-
+#certifications, #education {
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 3rem;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  }
+  .tab-section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .tab-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+  }
+    
+#edu-cert-tabs {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-btn {
+    background-color: transparent;
+    border: none;
+    color: #00f7ff;
+    font-size: 1.2rem;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .tab-btn.active {
+    border-bottom: 2px solid #f58f7c;
+    color: #f58f7c;
+  }
+  
+  .tab-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #444;
+    margin: 0 1rem;
+  }
+  
+  .tab-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .cert-card, .edu-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    width: 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .cert-card:hover, .edu-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .cert-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0.8rem 0;
+  }
+  
+  .edu-links {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .edu-links li {
+    margin: 1rem 0;
+  }
+  
+  .edu-links a {
+    color: #00f7ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .edu-links a:hover {
+    color: #f58f7c;
+  }
+  
+  .edu-detail-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  
 /* ======== Projects ======== */
 .project-grid {
   display: grid;
@@ -670,5 +785,88 @@ footer strong {
       max-width: 280px;
     }
   }
+  .cert-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
   
+  .cert-links li {
+    margin: 1rem 0;
+  }
+  
+  .cert-links a {
+    color: #00f7ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .cert-links a:hover {
+    color: #f58f7c;
+  }
+  
+  .cert-detail-card {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .cert-detail-card img {
+    width: 80%;
+    max-width: 400px;
+    margin: 1rem 0;
+    border-radius: 12px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .hidden {
+    display: none;
+  }
+  .edu-cert-flex {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .edu-cert-col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .subhead {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #00f7ff;
+    text-align: center;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #f58f7c;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+ 
   
