@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Full Stack Developer",
       "Software Engineer",
       "UI/UX Designer",
-      "Software Tester"
-    ];
+      "Software Tester"];
   
     const roleText = document.getElementById("role-text");
     let roleIndex = 0;
