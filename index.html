@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -53,64 +52,62 @@
   <section id="skills">
     <h2>Skills & Tools</h2>
   
-    <div class="skills-wrapper">
+    <div class="skills-grid">
   
       <!-- Programming Languages -->
-      <div class="skill-category-icons">
-        <div class="category-label">💻 Programming Languages</div>
-        <div class="floating-icons">
-          <i class="devicon-java-plain" title="Java"></i>
-          <span class="icon-placeholder" title="SQL">SQL</span>
+      <div class="skill-card cat-purple">
+        <h3>Programming Languages</h3>
+        <div class="skill-icons floating-icons">
+          <div class="float-bubble"><i class="devicon-java-plain"></i></div>
+          <div class="float-bubble">SQL</div>
         </div>
       </div>
   
       <!-- Web Technologies -->
-      <div class="skill-category-icons">
-        <div class="category-label">🌐 Web Technologies</div>
-        <div class="floating-icons">
-          <i class="devicon-html5-plain" title="HTML5"></i>
-          <i class="devicon-css3-plain" title="CSS3"></i>
-          <i class="devicon-javascript-plain" title="JavaScript"></i>
-          <i class="devicon-react-original" title="ReactJS"></i>
-          <i class="devicon-nodejs-plain" title="NodeJS"></i>
+      <div class="skill-card cat-teal">
+        <h3>Web Technologies</h3>
+        <div class="skill-icons floating-icons">
+          <div class="float-bubble"><i class="devicon-html5-plain"></i></div>
+          <div class="float-bubble"><i class="devicon-css3-plain"></i></div>
+          <div class="float-bubble"><i class="devicon-javascript-plain"></i></div>
+          <div class="float-bubble"><i class="devicon-react-original"></i></div>
+          <div class="float-bubble"><i class="devicon-nodejs-plain"></i></div>
         </div>
       </div>
   
       <!-- Testing & Tracking -->
-      <div class="skill-category-icons">
-        <div class="category-label">🧪 Testing & Issue Tracking</div>
-        <div class="floating-icons">
-          <span class="icon-placeholder" title="Cypress">Cypress</span>
-          <span class="icon-placeholder" title="Postman">Postman</span>
-          <i class="devicon-jira-plain" title="Jira"></i>
+      <div class="skill-card cat-pink">
+        <h3>Testing & Issue Tracking</h3>
+        <div class="skill-icons floating-icons">
+          <div class="float-bubble">Cypress</div>
+          <div class="float-bubble">Postman</div>
+          <div class="float-bubble"><i class="devicon-jira-plain"></i></div>
         </div>
       </div>
   
       <!-- Open Source Software -->
-      <div class="skill-category-icons">
-        <div class="category-label">🌿 Open Source Software</div>
-        <div class="floating-icons">
-          <span class="icon-placeholder" title="Spring Boot">Spring Boot</span>
-          <span class="icon-placeholder" title="Hibernate">Hibernate</span>
-          <span class="icon-placeholder" title="JDBC">JDBC</span>
+      <div class="skill-card cat-blue">
+        <h3>Open Source Software</h3>
+        <div class="skill-icons floating-icons">
+          <div class="float-bubble">Spring Boot</div>
+          <div class="float-bubble">Hibernate</div>
+          <div class="float-bubble">JDBC</div>
         </div>
       </div>
   
-      <!-- Dev & Management Tools -->
-      <div class="skill-category-icons">
-        <div class="category-label">🛠️ Dev & Management Tools</div>
-        <div class="floating-icons">
-          <i class="devicon-vscode-plain" title="VS Code"></i>
-          <i class="devicon-git-plain" title="Git"></i>
-          <span class="icon-placeholder" title="Oracle Virtual Machine">Oracle VM</span>
-          <i class="devicon-figma-plain" title="Figma"></i>
-          <span class="icon-placeholder" title="Agile">Agile</span>
-          <span class="icon-placeholder" title="Eclipse">Eclipse</span>
-          <span class="icon-placeholder" title="SDLC">SDLC</span>
-          <span class="icon-placeholder" title="OOP">OOP</span>
-          <i class="devicon-jenkins-line" title="Jenkins"></i>
-          <span class="icon-placeholder" title="GCP">GCP</span>
-          <span class="icon-placeholder" title="Digital Ocean Cloud">Digital Ocean</span>
+      <!-- Dev Tools -->
+      <div class="skill-card cat-yellow">
+        <h3>Dev & Management Tools</h3>
+        <div class="skill-icons floating-icons">
+          <div class="float-bubble"><i class="devicon-vscode-plain"></i></div>
+          <div class="float-bubble"><i class="devicon-git-plain"></i></div>
+          <div class="float-bubble">Oracle VM</div>
+          <div class="float-bubble"><i class="devicon-figma-plain"></i></div>
+          <div class="float-bubble">Agile</div>
+          <div class="float-bubble">Eclipse</div>
+          <div class="float-bubble">SDLC</div>
+          <div class="float-bubble">OOP</div>
+          <div class="float-bubble">GCP</div>
         </div>
       </div>
   
@@ -119,81 +116,81 @@
   
   
   <!-- Certifications & Education -->
-  <section id="edu-cert-tabs">
-    <h2>Certifications & Education</h2>
-    <div class="edu-cert-flex">
-      
-      <!-- Certifications Column -->
-      <div class="edu-cert-col">
-        <h3 class="subhead">Certifications</h3>
-        <ul class="cert-links">
-          <li><a href="javascript:void(0)" onclick="showCert('cert-accenture')">Accenture NA Coding Simulation</a></li>
-          <li><a href="javascript:void(0)" onclick="showCert('cert-hpe')">HPE Software Engineering Simulation</a></li>
-        </ul>
-  
-        <!-- Certificate Detail Cards -->
-        <div id="cert-accenture" class="cert-detail-card hidden">
-            <span class="hide-btn" onclick="hideDetail('cert-accenture', 'cert')">← Hide</span>
-          <h4>Accenture NA Coding Simulation</h4>
-          <img src="accenture.jpg" alt="Accenture Certificate" />
-          <p><strong>Role:</strong> Frontend Developer</p>
-          <p><strong>Time:</strong> 2024 – Completed via Forage</p>
-          <p>Completed Accenture’s coding simulation with real-world frontend tasks, issue tracking, and reporting.</p>
-        </div>
-  
-        <div id="cert-hpe" class="cert-detail-card hidden">
-            <span class="hide-btn" onclick="hideDetail('cert-hpe', 'cert')">← Hide</span>
-          <h4>HPE Software Engineering Simulation</h4>
-          <img src="hewlett.jpg" alt="HPE Certificate" />
-          <p><strong>Role:</strong> Software Engineering Intern</p>
-          <p><strong>Time:</strong> 2024 – Completed via Forage</p>
-          <p>Simulated agile tasks, project workflow, and development pipeline using JIRA and GitLab tools.</p>
-        </div>
-      </div>
-  
-      <!-- Education Column -->
-      <div class="edu-cert-col">
-        <h3 class="subhead">Education</h3>
-        <ul class="cert-links">
-          <li><a href="javascript:void(0)" onclick="showEdu('edu-Masters')">Master's – Pace University</a></li>
-          <li><a href="javascript:void(0)" onclick="showEdu('edu-Btech')">B.Tech – SREC</a></li>
-          <li><a href="javascript:void(0)" onclick="showEdu('edu-Intermediate')">Intermediate – Rao's</a></li>
-          <li><a href="javascript:void(0)" onclick="showEdu('edu-SSC')">SSC – KRRS</a></li>
-        </ul>
-  
-        <!-- Education Detail Cards -->
-        <div id="edu-Masters" class="cert-detail-card hidden" style="background-image: url('pace.jpg'); background-size: cover;">
-            <span class="hide-btn" onclick="hideDetail('edu-Masters', 'edu')">← Hide</span>
-          <h4>Pace University – MS Computer Science</h4>
-          <p><strong>Location:</strong> NY, New York</p>
-          <p><strong>GPA:</strong> 3.8</p>
-        </div>
-  
-        <div id="edu-Btech" class="cert-detail-card hidden" style="background-image: url('btech-campus.jpg'); background-size: cover;">
-            <span class="hide-btn" onclick="hideDetail('edu-Btech', 'edu')">← Hide</span>
-          <h4>Santhiram Engineering College – B.Tech ECE</h4>
-          <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
-          <p><strong>CGPA:</strong> 7.23</p>
-        </div>
-  
-        <div id="edu-Intermediate" class="cert-detail-card hidden">
-            <span class="hide-btn" onclick="hideDetail('edu-Intermediate', 'edu')">← Hide</span>
-          <h4>Rao's Junior College</h4>
-          <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
-          <p><strong>CGPA:</strong> 8.23</p>
-        </div>
-  
-        <div id="edu-SSC" class="cert-detail-card hidden">
-            <span class="hide-btn" onclick="hideDetail('edu-SSC', 'edu')">← Hide</span>
-          <h4>Keshava Reddy Residential School</h4>
-          <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
-          <p><strong>CGPA:</strong> 9.3</p>
-        </div>
-      </div>
-  
+<!-- ======== Certifications & Education Section ======== -->
+<section id="edu-cert-tabs">
+  <h2>Certifications & Education</h2>
+  <div class="cert-edu-container">
+    
+    <!-- Certifications Glass Card -->
+    <div class="cert-tab glass-card">
+      <h3>Certifications</h3>
+      <ul class="cert-links" id="certification-links">
+        <li><a href="javascript:void(0)" onclick="showCert('cert-accenture')">Accenture NA Coding Simulation</a></li>
+        <li><a href="javascript:void(0)" onclick="showCert('cert-hpe')">HPE Software Engineering Simulation</a></li>
+      </ul>
     </div>
-  </section>
-  
+
+    <!-- Education Glass Card -->
+    <div class="edu-tab glass-card">
+      <h3>Education</h3>
+      <ul class="cert-links" id="education-links">
+        <li><a href="javascript:void(0)" onclick="showCert('edu-Masters')">Master's – Pace University</a></li>
+        <li><a href="javascript:void(0)" onclick="showCert('edu-Btech')">B.Tech – SREC</a></li>
+        <li><a href="javascript:void(0)" onclick="showCert('edu-Intermediate')">Intermediate – Rao's</a></li>
+        <li><a href="javascript:void(0)" onclick="showCert('edu-SSC')">SSC – KRRS</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Certificates (Outside the cards) -->
+  <div id="cert-accenture" class="cert-detail-card hidden">
+    <a href="javascript:void(0)" class="btn hide-btn" onclick="hideDetail('cert-accenture', 'certification-links')">← Hide</a>
+    <h3>Accenture NA Coding Simulation</h3>
+    <img src="accenture.jpg" alt="Accenture Certificate" />
+    <p><strong>Role:</strong> Frontend Developer</p>
+    <p><strong>Time:</strong> 2024 – Completed via Forage</p>
+    <p>Real-world frontend tasks, issue tracking, and reporting.</p>
+  </div>
+
+  <div id="cert-hpe" class="cert-detail-card hidden">
+    <a href="javascript:void(0)" class="btn hide-btn" onclick="hideDetail('cert-hpe', 'certification-links')">← Hide</a>
+    <h3>HPE Software Engineering Simulation</h3>
+    <img src="hewlett.jpg" alt="HPE Certificate" />
+    <p><strong>Role:</strong> Software Engineering Intern</p>
+    <p><strong>Time:</strong> 2024 – Completed via Forage</p>
+    <p>Agile tasks, JIRA boards, GitLab workflows.</p>
+  </div>
+
+  <!-- Education Detail Cards -->
+  <div id="edu-Masters" class="cert-detail-card hidden" style="background-image: url('pace.jpg'); background-size: cover;">
+    <a href="javascript:void(0)" class="btn hide-btn" onclick="hideDetail('edu-Masters', 'education-links')">← Hide</a>
+    <h3>Pace University – MS Computer Science</h3>
+    <p><strong>Location:</strong> NY, New York</p>
+    <p><strong>GPA:</strong> 3.8</p>
+  </div>
+
+  <div id="edu-Btech" class="cert-detail-card hidden" style="background-image: url('btech-campus.jpg'); background-size: cover;">
+    <a href="javascript:void(0)" class="btn hide-btn" onclick="hideDetail('edu-Btech', 'education-links')">← Hide</a>
+    <h3>Santhiram Engineering College – B.Tech ECE</h3>
+    <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
+    <p><strong>CGPA:</strong> 7.23</p>
+  </div>
+
+  <div id="edu-Intermediate" class="cert-detail-card hidden">
+    <a href="javascript:void(0)" class="btn hide-btn" onclick="hideDetail('edu-Intermediate', 'education-links')">← Hide</a>
+    <h3>Rao's Junior College</h3>
+    <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
+    <p><strong>CGPA:</strong> 8.23</p>
+  </div>
+
+  <div id="edu-SSC" class="cert-detail-card hidden">
+    <a href="javascript:void(0)" class="btn hide-btn" onclick="hideDetail('edu-SSC', 'education-links')">← Hide</a>
+    <h3>Keshava Reddy Residential School</h3>
+    <p><strong>Location:</strong> Nandyal, Andhra Pradesh</p>
+    <p><strong>CGPA:</strong> 9.3</p>
+  </div>
+</section>
+
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
@@ -235,15 +232,39 @@
 
   <!-- Timeline -->
   <section id="timeline">
-    <h2>My Timeline</h2>
-    <ul class="timeline">
-      <li><strong>2023–2025:</strong> MS in Computer Science, Pace University</li>
-      <li><strong>2024:</strong> Hearts and Paws – Software Testing</li>
-      <li><strong>2024:</strong> SEW–SMART – Full Stack Development</li>
-      <li><strong>2024:</strong> Meal Planner – Frontend Development</li>
+    <h2>My Journey</h2>
+    <ul class="compact-timeline">
+      <li>
+        <span class="dot">📘</span>
+        <div class="content">
+          <h3>2021</h3>
+          <p>Started B.Tech in ECE at SREC · First sparks of curiosity in tech 💡</p>
+        </div>
+      </li>
+      <li>
+        <span class="dot">🧵</span>
+        <div class="content">
+          <h3>2023</h3>
+          <p>Built <strong>SEW–SMART</strong> · Graduated · Got serious about full-stack</p>
+        </div>
+      </li>
+      <li>
+        <span class="dot">🎯</span>
+        <div class="content">
+          <h3>2024</h3>
+          <p>Completed Accenture + HPE internships · Explored UI/UX · Cypress testing</p>
+        </div>
+      </li>
+      <li>
+        <span class="dot">🐾</span>
+        <div class="content">
+          <h3>2025</h3>
+          <p>Wrapping up MS @ Pace · Worked on <strong>Hearts & Paws</strong></p>
+        </div>
+      </li>
     </ul>
   </section>
-
+  
   <!-- Contact Form -->
   <section id="contact">
     <h2>Let's Connect</h2>
@@ -259,9 +280,65 @@
   <footer>
     <p><strong>LP</strong> &copy; All rights reserved.</p>
   </footer>
-  <div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 30,
+        "density": {
+          "enable": true,
+          "value_area": 900
+        }
+      },
+      "color": {
+        "value": ["#00f7ff", "#f58f7c", "#fde68a"]
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.3,
+        "random": true
+      },
+      "size": {
+        "value": 5,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.15,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": false
+        }
+      },
+      "modes": {
+        "repulse": {
+          "distance": 100,
+          "duration": 0.4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 
 </body>
 </html>
