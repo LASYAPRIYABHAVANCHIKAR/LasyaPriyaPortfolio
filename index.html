@@ -192,32 +192,54 @@
 </section>
 
   <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="project1-placeholder.jpg" alt="Hearts and Paws" />
-        <h3>Hearts and Paws</h3>
-        <p><strong>Role:</strong> Software Tester</p>
-        <p><strong>Tech Stack:</strong> Cypress, Jenkins, Next.js</p>
-        <p>A full-stack pet adoption platform with robust testing flows.</p>
-      </div>
-      <div class="project-card">
-        <img src="project2-placeholder.jpg" alt="SEW SMART" />
-        <h3>SEW–SMART</h3>
-        <p><strong>Role:</strong> Full Stack Developer</p>
-        <p><strong>Tech Stack:</strong> React.js, Node.js, MongoDB</p>
-        <p>An online tailoring service platform for client–tailor engagement.</p>
-      </div>
-      <div class="project-card">
-        <img src="project3-placeholder.jpg" alt="Meal Planner" />
-        <h3>Meal Planner</h3>
-        <p><strong>Role:</strong> Frontend Developer</p>
-        <p><strong>Tech Stack:</strong> React.js, Firebase</p>
-        <p>A weekly nutrition tracker with customizable meal plans.</p>
-      </div>
+  <!-- ======== Projects Section ======== -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-container">
+
+    <!-- Project Titles -->
+    <div class="project-tab">
+      <h3>Project List</h3>
+      <ul class="project-links">
+        <li><a href="javascript:void(0)" onclick="showProject('project-hearts')">Hearts and Paws</a></li>
+        <li><a href="javascript:void(0)" onclick="showProject('project-sew')">SEW–SMART</a></li>
+        <li><a href="javascript:void(0)" onclick="showProject('project-meal')">Meal Planner</a></li>
+      </ul>
     </div>
-  </section>
+
+    <!-- Project Detail Cards -->
+    <div id="project-hearts" class="project-detail-card hidden">
+      <a href="javascript:void(0)" class="hide-btn" onclick="hideProject('project-hearts')">← Hide</a>
+      <h3>Hearts and Paws</h3>
+      <img src="project1-placeholder.jpg" alt="Hearts and Paws Home Page" />
+      <p><strong>Role:</strong> Software Tester</p>
+      <p><strong>Tech Stack:</strong> Cypress, Jenkins, Next.js</p>
+      <p>A full-stack pet adoption platform with robust testing flows and secure deployment pipelines.</p>
+      <a href="https://github.com/kt-codes-here/hearts-and-paws.git" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div id="project-sew" class="project-detail-card hidden">
+      <a href="javascript:void(0)" class="hide-btn" onclick="hideProject('project-sew')">← Hide</a>
+      <h3>SEW–SMART</h3>
+      <img src="project2-placeholder.jpg" alt="SEW–SMART Home Page" />
+      <p><strong>Role:</strong> Full Stack Developer</p>
+      <p><strong>Tech Stack:</strong> React.js, Node.js, MongoDB</p>
+      <p>An online tailoring service platform that facilitates appointments, feedback, and client-tailor interaction.</p>
+      <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/full_stack_final_project.git" class="btn" target="_blank">View Project</a>
+    </div>
+
+    <div id="project-meal" class="project-detail-card hidden">
+      <a href="javascript:void(0)" class="hide-btn" onclick="hideProject('project-meal')">← Hide</a>
+      <h3>Meal Planner</h3>
+      <img src="project3-placeholder.jpg" alt="Meal Planner Home Page" />
+      <p><strong>Role:</strong> Frontend Developer</p>
+      <p><strong>Tech Stack:</strong> React.js, Firebase</p>
+      <p>A weekly meal tracking app for nutrition-conscious users with customizable plans and reminders.</p>
+      <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/mobile_web_content_final_project.git" class="btn" target="_blank">View Project</a>
+    </div>
+
+  </div>
+</section>
 
   <!-- LP Draws -->
   <section id="artwork">

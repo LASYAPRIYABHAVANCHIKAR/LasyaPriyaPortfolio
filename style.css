@@ -304,31 +304,107 @@ h2 {
 }
 
 /* ======== Projects Section ======== */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+#projects {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
-.project-card {
+.project-tab {
+  flex: 1;
+  min-width: 300px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 12px rgba(255, 182, 193, 0.2);
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
+.project-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
-.project-card img {
+.project-links li {
+  margin: 1rem 0;
+}
+
+.project-links a {
+  color: #00f7ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.1rem;
+}
+
+.project-links a:hover {
+  color: #f58f7c;
+}
+
+.project-detail-card {
+  display: none;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.95);
+  opacity: 0;
+  animation: popIn 0.5s forwards;
+}
+
+.project-detail-card:not(.hidden) {
+  display: block;
+}
+
+.project-detail-card img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  max-width: 300px;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.2);
+}
+
+.project-detail-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #00f7ff;
+}
+
+.project-detail-card p {
+  margin-bottom: 0.8rem;
+}
+
+.project-detail-card a.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: #00f7ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project-detail-card a.btn:hover {
+  background-color: #f58f7c;
+  color: #fff;
 }
 
 /* ======== LP Draws Section ======== */
