@@ -315,18 +315,24 @@ h2 {
 .project-summary-glass {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  padding: 2rem;
+  padding: 1rem 1.5rem;
   border-radius: 1rem;
   transition: transform 0.2s ease;
   color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
-.project-summary-glass h3 a {
-  color: #00f7ff;
-  text-decoration: none;
+.project-summary-glass:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
 }
-.project-summary-glass h3 a:hover {
+.project-summary-glass h3 {
+  margin-bottom: 0.3rem;
   color: #f58f7c;
+  font-size: 1.2rem;
+}
+.project-summary-glass h3 a {
+  color: #f58f7c;
+  text-decoration: none;
 }
 .project-summary-glass p {
   margin: 0;
@@ -341,66 +347,53 @@ h2 {
   margin: 1.5rem auto;
   max-width: 800px;
   box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  position: relative;
 }
-
 .project-glass-card h3 {
   color: #f58f7c;
 }
 .project-glass-card .highlight-label {
-  color: #00f7ff;
+  color: #f58f7c;
   font-weight: bold;
 }
 .project-glass-card .detail-text {
   color: white;
 }
 .project-glass-card img {
-width: 100%;
-  max-width: 300px;
-  margin: 1rem 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 247, 255, 0.1);
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
-
 .project-glass-card.hidden {
   display: none;
 }
 .hide-btn {
-  background: #00f7ff;
-  color: black;
+  background: #f58f7c;
+  color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  float: right;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.github-custom {
-  color: #00f7ff;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  display: inline-block;
-  transition: color 0.3s ease;
-}
-.github-custom:hover {
-  color: #ffffff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
 }
 .github-btn {
-background-color: #00f7ff;
-color: black;
-padding: 0.5rem 1rem;
-border-radius: 0.5rem;
-text-decoration: none;
-font-weight: bold;
-display: inline-block;
-margin-top: 1rem;
-transition: background-color 0.3s ease;
+  background-color: #00f7ff;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
 }
 .github-btn:hover {
-background-color: #00cddf;
-color: white;
+  background-color: #00cddf;
+  color: white;
 }
-
 
 
 /* ======== LP Draws Section ======== */
