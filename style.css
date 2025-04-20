@@ -296,33 +296,28 @@ h2 {
 }
 
 .hide-btn {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #f58f7c;
-  color: white;
+  display: inline-block;
+  background-color: #00f7ff;
+  color: black;
   padding: 6px 14px;
   font-size: 13px;
-  border-radius: 20px;
   font-weight: 500;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
-  z-index: 10;
+  text-align: center;
+  position: relative;
+  margin: 0 auto 1rem;
+  top: 0;
+  left: 0;
+  transform: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
 
 .hide-btn:hover {
-  background-color: #00f7ff;
-  color: black;
-}
-@media (max-width: 600px) {
-  .hide-btn {
-    font-size: 12px;
-    padding: 5px 12px;
-    top: -10px;
-  }
+  background-color: #f58f7c;
+  color: white;
 }
 
 /* ======== Projects Section ======== */
