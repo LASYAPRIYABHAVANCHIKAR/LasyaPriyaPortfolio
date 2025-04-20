@@ -99,13 +99,12 @@ function hideDetail(id) {
     card.classList.add("hidden");
   }
 }
-function showProject(id) {
-  document.querySelectorAll('.project-detail-card').forEach(el => el.classList.add('hidden'));
+
+function showProject(id, event) {
+  event.preventDefault();
+  document.querySelectorAll('.project-glass-card').forEach(el => el.classList.add('hidden'));
   document.getElementById(id).classList.remove('hidden');
 }
-
 function hideProject(id) {
   document.getElementById(id).classList.add('hidden');
 }
-
-  

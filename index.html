@@ -192,55 +192,87 @@
 </section>
 
   <!-- Projects -->
-  <!-- ======== Projects Section ======== -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project-container">
-
-    <!-- Project Titles -->
-    <div class="project-tab">
-      <h3>Project List</h3>
-      <ul class="project-links">
-        <li><a href="javascript:void(0)" onclick="showProject('project-hearts')">Hearts and Paws</a></li>
-        <li><a href="javascript:void(0)" onclick="showProject('project-sew')">SEW–SMART</a></li>
-        <li><a href="javascript:void(0)" onclick="showProject('project-meal')">Meal Planner</a></li>
-      </ul>
+  <section id="projects">
+    <h2 class="section-title">Project Work</h2>
+    <div class="project-list-grid">
+      <div class="project-summary-glass">
+        <h3><a href="#" onclick="showProject('project1', event)">Hearts & Paws</a></h3>
+        <p>Where Every Tail Finds a Tale</p>
+      </div>
+      <div class="project-summary-glass">
+        <h3><a href="#" onclick="showProject('project2', event)">Sew Smart</a></h3>
+        <p>Threading Style with Technology</p>
+      </div>
+      <div class="project-summary-glass">
+        <h3><a href="#" onclick="showProject('project3', event)">Meal Planner App</a></h3>
+        <p>Modern Tools for Meal Mastery</p>
+      </div>
     </div>
+  
+    <!-- Glass card sections -->
+    <div id="project1" class="project-glass-card hidden">
+      <button class="hide-btn" onclick="hideProject('project1')">← Hide</button>
+      <h3>Hearts & Paws</h3>
+      <p><strong class="highlight-label">Timeline:</strong> <span class="detail-text">Jan 2025 - Current</span></p>
+      <p><strong class="highlight-label">Role:</strong> <span class="detail-text"> Software Tester</span></p>
+      <p><strong class="highlight-label">Team:</strong> <span class="detail-text"> Team of 10 </span></p>
+      <div class="project-badges">
+        <span class="badge">Capstone</span>
+      </div>
+      <p><strong class="highlight-label">Tech Stack:</strong><span class="detail-text"> Next.js(React), TypeScript, Tailwind CSS, Prisma ORM, ESLint, Node.js, Jenkins, PostCSS, Middleware.</span></p>
+      <p><strong class="highlight-label">Testing Tools:</strong><span class="detail-text"> Cypress, JavaScript, Jira, Git, Chrome Dev Tools.</span></p>
+      <p class="detail-text"><i>Hearts & Paws is a feature-rich pet adoption platform built to simplify and personalize the adoption process for users and shelters alike. The application enables adopters to search pets based on breed, age, activity level, and compatibility, while also allowing shelters to manage listings, schedule appointments, and track adoption progress.<br>
 
-    <!-- Project Detail Cards -->
-    <div id="project-hearts" class="project-detail-card hidden">
-      <a href="javascript:void(0)" class="hide-btn" onclick="hideProject('project-hearts')">← Hide</a>
-      <h3>Hearts and Paws</h3>
-      <img src="project1-placeholder.jpg" alt="Hearts and Paws Home Page" />
-      <p><strong>Role:</strong> Software Tester</p>
-      <p><strong>Tech Stack:</strong> Cypress, Jenkins, Next.js</p>
-      <p>A full-stack pet adoption platform with robust testing flows and secure deployment pipelines.</p>
-      <a href="https://github.com/kt-codes-here/hearts-and-paws.git" class="btn" target="_blank">View Project</a>
+        As a dedicated software tester, I led the testing efforts from end to end, focusing on ensuring seamless, bug-free user experiences. I developed detailed test cases and performed both manual and automated testing using Cypress, validating everything from UI components to deep user workflows like login, filters, and adoption forms.<br>
+        
+        I collaborated with the team in an Agile environment, using Jira for sprint planning and bug tracking, and contributed to version control using Git. I also actively tested RESTful API integrations and ran regression tests to ensure stability across builds.<br>
+        
+        My efforts helped uncover over 25+ issues early in development, improve cross-browser compatibility, and ultimately boost overall application stability by 30%. This project not only sharpened my technical testing skills but also strengthened my communication, collaboration, and attention to detail in a real-world development setting.</i></p>
+      <img src="Adopterimage.png" alt="Adopter Homepage">
+      <img src="Rehomerimage.png" alt="Rehomer Homepage">
+      <img src="Serviceproviderimage.png" alt="Service Provider Homepage">
+      <a href="https://github.com/kt-codes-here/hearts-and-paws" class="github-btn" target="_blank">GITHUB</a>
     </div>
-
-    <div id="project-sew" class="project-detail-card hidden">
-      <a href="javascript:void(0)" class="hide-btn" onclick="hideProject('project-sew')">← Hide</a>
-      <h3>SEW–SMART</h3>
-      <img src="project2-placeholder.jpg" alt="SEW–SMART Home Page" />
-      <p><strong>Role:</strong> Full Stack Developer</p>
-      <p><strong>Tech Stack:</strong> React.js, Node.js, MongoDB</p>
-      <p>An online tailoring service platform that facilitates appointments, feedback, and client-tailor interaction.</p>
-      <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/full_stack_final_project.git" class="btn" target="_blank">View Project</a>
+  
+    <div id="project2" class="project-glass-card hidden">
+      <button class="hide-btn" onclick="hideProject('project2')">← Hide</button>
+      <h3>Sew Smart </h3>
+      <p><strong class="highlight-label">Timeline:</strong><span class="detail-text">Sep 2024 - Dec 2024</span></p>
+      <p><strong class="highlight-label">Role:</strong><span class="detail-text">Full Stack Developer</span></p>
+      <p><strong class="highlight-label">Team:</strong><span class="detail-text">Team of 3</span></p>
+      <div class="project-badges">
+        <span class="badge">Course Project</span>
+      </div>
+      <p><strong class="highlight-label">Tech Stack:</strong><span class="detail-text">React.js, Node.js, MongoDB, Bootstrap, CSS.</span></p>
+      <p class="detail-text"><i>Sew Smart is a stylish full-stack web application that digitizes traditional tailoring — making it easier for <strong class="highlight-label">customers</strong> to place orders and <strong class="highlight-label">tailors</strong> to manage stitching tasks, all from the comfort of a dashboard.</p>
+      <p class="detail-text">Built with a team of 3, I contributed as a full stack developer, using React.js, Node.js, and MongoDB to craft seamless front-end experiences and robust backend logic. We implemented secure role-based logins, order management, and interactive dashboards tailored to each user type.</p>
+      <p class="detail-text">The UI is clean, responsive, and built with Bootstrap and custom CSS for a smooth experience across devices. We focused on intuitive workflows and efficient data flow using RESTful APIs.</p>
+      <p class="detail-text">This project enhanced my ability to work in a collaborative setting while solving real-world problems with practical full-stack solutions — and yes, it made me appreciate just how satisfying a perfect fit can be.✨</i></p>
+      <img src="Sewsmarthomepage.png" alt="Homepage Screenshot">
+      <img src="sewsmartpic4.png" alt="Screenshot 2">
+      <img src="sewsmartpic3.png" alt="Screenshot 3">
+      <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/full_stack_final_project.git" class="github-btn" target="_blank">GITHUB</a>
     </div>
-
-    <div id="project-meal" class="project-detail-card hidden">
-      <a href="javascript:void(0)" class="hide-btn" onclick="hideProject('project-meal')">← Hide</a>
-      <h3>Meal Planner</h3>
-      <img src="project3-placeholder.jpg" alt="Meal Planner Home Page" />
-      <p><strong>Role:</strong> Frontend Developer</p>
-      <p><strong>Tech Stack:</strong> React.js, Firebase</p>
-      <p>A weekly meal tracking app for nutrition-conscious users with customizable plans and reminders.</p>
-      <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/mobile_web_content_final_project.git" class="btn" target="_blank">View Project</a>
+  
+    <div id="project3" class="project-glass-card hidden">
+      <button class="hide-btn" onclick="hideProject('project3')">← Hide</button>
+      <h3>Meal Planner App </h3>
+      <p><strong class="highlight-label">Timeline:</strong><span class="detail-text">Sep 2024 - Dec 2024</span></p>
+      <p><strong class="highlight-label">Role:</strong><span class="detail-text">Frontend Developer</span></p>
+      <p><strong class="highlight-label">Team:</strong><span class="detail-text">Team of 3</span></p>
+      <div class="project-badges">
+        <span class="badge">Course Project</span>
+      </div>
+      <p><strong class="highlight-label">Tech Stack:</strong><span class="detail-text"> HTML, CSS, JavaScript, JQuery, Bootstrap.</span></p>
+      <p class="detail-text"><i>The Meal Planner App is a full-featured web application designed to help users organize, plan, and track over 21 meals per week across breakfast, lunch, and dinner. It simplifies weekly meal organization while encouraging healthy eating habits and consistency.</p>
+        As the frontend developer in a team of 3, I was responsible for designing a clean, responsive interface using HTML, CSS, Bootstrap, and JavaScript. I also implemented interactive components with jQuery and handled local storage to allow users to save their meal plans across sessions.</p>
+        The app supports day-by-day visual planning, easy meal slot editing, and smooth interaction on both desktop and mobile devices. Reusable components and responsive layout ensured a seamless user experience.</p>
+        This project refined my frontend development skills and gave me valuable experience in building user-centric features within a collaborative, real-world setting. 🍽️</i></p>
+      <a href="https://github.com/LASYAPRIYABHAVANCHIKAR/mobile_web_content_final_project.git" target="_blank" class="github-btn">GITHUB</a>
     </div>
-
-  </div>
-</section>
-
+  </section>
+  
+  
   <!-- LP Draws -->
   <section id="artwork">
     <h2>LP Draws</h2>

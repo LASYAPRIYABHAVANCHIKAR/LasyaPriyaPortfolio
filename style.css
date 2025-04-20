@@ -304,108 +304,102 @@ h2 {
 }
 
 /* ======== Projects Section ======== */
-#projects {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+.project-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-inline: auto;
 }
-
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.project-tab {
-  flex: 1;
-  min-width: 300px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 2rem;
+.project-summary-glass {
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 12px rgba(255, 182, 193, 0.2);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
-
-.project-links {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-.project-links li {
-  margin: 1rem 0;
-}
-
-.project-links a {
+.project-summary-glass h3 a {
   color: #00f7ff;
-  font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
-  font-size: 1.1rem;
 }
-
-.project-links a:hover {
+.project-summary-glass h3 a:hover {
   color: #f58f7c;
 }
-
-.project-detail-card {
-  display: none;
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 2.5rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+.project-summary-glass p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #eee;
+}
+.project-glass-card {
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  text-align: center;
-  color: #fff;
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  transform: scale(0.95);
-  opacity: 0;
-  animation: popIn 0.5s forwards;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 800px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
 }
-
-.project-detail-card:not(.hidden) {
-  display: block;
+.project-glass-card h3 {
+  color: #f58f7c;
 }
-
-.project-detail-card img {
-  width: 100%;
+.project-glass-card .highlight-label {
+  color: #00f7ff;
+  font-weight: bold;
+}
+.project-glass-card .detail-text {
+  color: white;
+}
+.project-glass-card img {
+width: 100%;
   max-width: 300px;
   margin: 1rem 0;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 247, 255, 0.1);
 }
 
-.project-detail-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.project-glass-card.hidden {
+  display: none;
+}
+.hide-btn {
+  background: #00f7ff;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 1rem;
+}
+.github-custom {
   color: #00f7ff;
-}
-
-.project-detail-card p {
-  margin-bottom: 0.8rem;
-}
-
-.project-detail-card a.btn {
+  font-size: 1.5rem;
   margin-top: 1rem;
   display: inline-block;
-  padding: 0.5rem 1.2rem;
-  background-color: #00f7ff;
-  color: #000;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
+}
+.github-custom:hover {
+  color: #ffffff;
+}
+.github-btn {
+background-color: #00f7ff;
+color: black;
+padding: 0.5rem 1rem;
+border-radius: 0.5rem;
+text-decoration: none;
+font-weight: bold;
+display: inline-block;
+margin-top: 1rem;
+transition: background-color 0.3s ease;
+}
+.github-btn:hover {
+background-color: #00cddf;
+color: white;
 }
 
-.project-detail-card a.btn:hover {
-  background-color: #f58f7c;
-  color: #fff;
-}
+
 
 /* ======== LP Draws Section ======== */
 .art-gallery {
