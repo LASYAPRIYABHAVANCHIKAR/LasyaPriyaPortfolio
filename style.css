@@ -315,7 +315,7 @@ h2 {
 .project-summary-glass {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  padding: 1rem 1.5rem;
+  padding: 2rem;
   border-radius: 1rem;
   transition: transform 0.2s ease;
   color: white;
@@ -342,6 +342,7 @@ h2 {
   max-width: 800px;
   box-shadow: 0 0 12px rgba(0,0,0,0.2);
 }
+
 .project-glass-card h3 {
   color: #f58f7c;
 }
@@ -372,6 +373,7 @@ width: 100%;
   cursor: pointer;
   float: right;
   margin-bottom: 1rem;
+  position: relative;
 }
 .github-custom {
   color: #00f7ff;
@@ -431,7 +433,7 @@ color: white;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
-  color: black;
+  color: #00f7ff;
   margin-bottom: 2.5rem;
 }
 
