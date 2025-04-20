@@ -389,31 +389,31 @@ h2 {
   color: white;
 }
 /* ========== HIDE BUTTON STYLE ========== */
-.hide-btn {
-  background-color: #00f7ff;
-  color: black;
-  border: none;
-  border-radius: 12px;
-  padding: 6px 14px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 12px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: inline-block;
-}
-
-.hide-btn:hover {
-  background-color: #e07264;
-  transform: scale(1.05);
-}
-
 @media (max-width: 600px) {
+  .project-title {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+
   .hide-btn {
     font-size: 13px;
     padding: 5px 12px;
     margin: 10px auto 0;
     display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 16px;
   }
 }
 
