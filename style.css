@@ -503,6 +503,21 @@ h2 {
 .project-glass-card.hidden {
   display: none;
 }
+.badge {
+  display: inline-block;
+  background-color: #00f7ff;
+  color: black;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
 
 .github-btn {
   background-color: #00f7ff;
