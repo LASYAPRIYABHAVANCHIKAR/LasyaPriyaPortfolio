@@ -17,7 +17,8 @@
 <body>
     <!--Nav bar for all section buttons-->
     <header>
-      <nav class="navbar centered-nav">
+      <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()" id="menu-icon">☰</div>
         <ul class="nav-links">
           <li><a href="#landing">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -449,6 +450,15 @@
     },
     "retina_detect": true
   });
+</script>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.getElementById('menu-icon');
+    
+    navLinks.classList.toggle('active');
+    menuIcon.textContent = navLinks.classList.contains('active') ? '✖' : '☰';
+  }
 </script>
 
 
