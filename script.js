@@ -107,6 +107,13 @@ function showProject(id, event) {
 function hideProject(id) {
   document.getElementById(id).classList.add('hidden');
 }
+function openModal() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("resumeModal").style.display = "none";
+}
 
 
   

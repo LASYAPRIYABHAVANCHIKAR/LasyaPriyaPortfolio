@@ -16,21 +16,21 @@
 </head>
 <body>
     <!--Nav bar for all section buttons-->
-    <header>
-      <nav class="navbar">
-        <div class="menu-toggle" onclick="toggleMenu()" id="menu-icon">☰</div>
-        <ul class="nav-links">
-          <li><a href="#landing">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#edu-cert-tabs">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#lp-draws">LP Draws</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    
+   <header>
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()" id="menu-icon">☰</div>
+    <ul class="nav-links">
+      <li><a href="#landing">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#edu-cert-tabs">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#lp-draws">LP Draws</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
     
   
   <!-- Hero Section -->
@@ -374,14 +374,22 @@
     <span class="close" onclick="closeModal()">&times;</span>
     <h3>Request Resume</h3>
     <form action="https://formsubmit.co/lasyapriyafsd@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Why would you like my resume?" required></textarea>
-      <input type="hidden" name="_captcha" value="false">
-      <button type="submit">Send Request</button>
+      <input type="hidden" name="_captcha" value="false" />
+
+      <!-- New button group -->
+      <div class="modal-button-group">
+        <button type="submit">Send Request</button>
+        <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+      </div>
     </form>
   </div>
 </div>
+
+
+
 
   <!-- Footer -->
   <footer>
