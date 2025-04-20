@@ -24,7 +24,8 @@
       <h3 id="role-text"></h3>
       <div class="button-group">
         <a href="#contact" class="btn">Hire Me</a>
-        <a href="BHAVANCHIKARLASYAPRIYARESUME.pdf" download class="btn">Download Resume</a>
+        <a href="#" onclick="openModal()" class="btn">Download Resume</a>
+
         <a href="https://github.com/LASYAPRIYABHAVANCHIKAR" class="btn" target="_blank" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
@@ -281,61 +282,84 @@
   
   
   <!-- LP Draws -->
-  <section id="artwork">
-    <h2>LP Draws</h2>
-    <div class="art-gallery">
-      <img src="drawing 1.jpg" alt="Artwork 1" />
-      <img src="drawing 2.jpg" alt="Artwork 2" />
-      <img src="drawing 3.jpg" alt="Artwork 3" />
-      <img src="drawing 4.jpg" alt="Artwork 4" />
+  <section id="lp-draws" class="section">
+    <h2 class="section-title">LP Draws</h2>
+    <div class="lp-gallery">
+      <img src="drawing 2.jpg" alt="Artwork 1" class="lp-art">
+      <img src="drawing 3.jpg" alt="Artwork 2" class="lp-art">
+      <img src="drawing 4.jpg" alt="Artwork 3" class="lp-art">
+    </div>
+  
+    <div class="lp-link-container">
+      <a href="https://your-art-link.com" target="_blank" class="lp-draws-btn">
+        Explore More Artwork
+      </a>
     </div>
   </section>
+  
 
   <!-- Timeline -->
-  <section id="timeline">
-    <h2>My Journey</h2>
-    <ul class="compact-timeline">
-      <li>
-        <span class="dot">📘</span>
+  <section id="timeline" class="timeline-section">
+    <h2 class="section-title">My Journey</h2>
+  
+    <div class="timeline">
+      <div class="timeline-container left">
         <div class="content">
-          <h3>2021</h3>
-          <p>Started B.Tech in ECE at SREC · First sparks of curiosity in tech 💡</p>
+          <h3>2025 – Present</h3>
+          <h4>MS in Computer Science</h4>
+          <p>Pace University, New York – Focused on Full Stack Development & Software Testing.</p>
         </div>
-      </li>
-      <li>
-        <span class="dot">🧵</span>
+      </div>
+  
+      <div class="timeline-container right">
         <div class="content">
-          <h3>2023</h3>
-          <p>Built <strong>SEW–SMART</strong> · Graduated · Got serious about full-stack</p>
+          <h3>2024 - 2025</h3>
+          <h4>Application of Techy Skills</h4>
+          <p>Worked on Academic Projects & gained hands-on experience to enhance skills in Full Stack Development.</p>
         </div>
-      </li>
-      <li>
-        <span class="dot">🎯</span>
+      </div>
+  
+      <div class="timeline-container left">
         <div class="content">
-          <h3>2024</h3>
-          <p>Completed Accenture + HPE internships · Explored UI/UX · Cypress testing</p>
+          <h3>2019 – 2023</h3>
+          <h4>B.Tech in ECE</h4>
+          <p>Santhiram Engineering College – Developed analytical thinking and began my journey into coding!</p>
         </div>
-      </li>
-      <li>
-        <span class="dot">🐾</span>
-        <div class="content">
-          <h3>2025</h3>
-          <p>Wrapping up MS @ Pace · Worked on <strong>Hearts & Paws</strong></p>
-        </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
+  
+  
+
   
   <!-- Contact Form -->
   <section id="contact">
     <h2>Let's Connect</h2>
-    <form action="mailto:lasyapriyafsd@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <p style="text-align: center;">Want to reach out? Just click below to shoot me an email!</p>
+    <div style="text-align: center; margin-top: 1rem;">
+      <a href="mailto:lasyapriyafsd@gmail.com?subject=Portfolio Inquiry" class="btn">Email Me</a>
+
+    </div>
   </section>
+  
+
+
+  
+
+<!-- Hidden form modal -->
+<div id="resumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Request Resume</h3>
+    <form action="https://formsubmit.co/lasyapriyafsd@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Why would you like my resume?" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer>
@@ -343,6 +367,11 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
+
+<!-- Button to trigger form -->
+
+
+
   particlesJS('particles-js', {
     "particles": {
       "number": {
@@ -400,6 +429,7 @@
     "retina_detect": true
   });
 </script>
+
 
 </body>
 </html>
