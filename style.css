@@ -439,6 +439,34 @@ h2 {
   background-color: #f58f7c;
   color: white;
 }
+/* Already existing hide-btn styles can stay */
+.hide-btn {
+  display: inline-block;
+  background-color: #00f7ff;
+  color: black;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  max-width: fit-content;
+}
+
+/* Mobile fix: center it and shrink max width */
+@media (max-width: 600px) {
+  .hide-btn {
+    display: block;
+    font-size: 12px;
+    padding: 5px 10px;
+    max-width: 120px;
+    margin: 0.5rem auto 1rem auto;
+  }
+}
 
 /* ======== Projects Section ======== */
 .project-list-grid {
