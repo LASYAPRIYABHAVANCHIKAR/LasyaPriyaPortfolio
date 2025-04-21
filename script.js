@@ -115,21 +115,6 @@ function closeModal() {
   document.getElementById("resumeModal").style.display = "none";
 }
 
-
-  
-
-
-
-
-
-function openModal() {
-  document.getElementById("resumeModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("resumeModal").style.display = "none";
-}
-
 // Optional: Close modal if user clicks outside
 window.onclick = function(event) {
   const modal = document.getElementById("resumeModal");
@@ -137,4 +122,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-

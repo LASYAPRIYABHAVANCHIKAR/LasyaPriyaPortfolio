@@ -200,6 +200,12 @@ h2 {
 }
 
 /* ======== About Section ======== */
+#aboutText {
+  white-space: pre-wrap;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
 .about-modern-card {
   display: flex;
   flex-wrap: wrap;
@@ -254,7 +260,6 @@ h2 {
     padding: 0 1rem;
   }
 }
-
 
 
 /* ======== Skills Section ======== */
