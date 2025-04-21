@@ -130,28 +130,34 @@ particlesJS("particles-js", {
 "retina_detect": true
 });
 // Initialize EmailJS
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("16OKrJJhCbc7Gyc4d"); // Your Public Key
-})();
 
-document.getElementById("resumeForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+  const form = document.getElementById("resumeForm");
+  const popup = document.getElementById("successPopup");
 
-  emailjs.sendForm('service_odtdaoy', 'template_oo881rf', this) // Use your selected template
-    .then(function () {
-      const popup = document.getElementById("successPopup");
-      popup.classList.add("show");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      console.log("Form submission prevented");
 
-      setTimeout(() => {
-        popup.classList.remove("show");
-      }, 3000);
+      emailjs.sendForm('service_odtdaoy', 'template_oo881rf', this)
+        .then(function () {
+          popup.classList.add("show");
 
-      e.target.reset();
-      closeModal();
-    }, function (error) {
-      console.log(error);
-      alert("Oops! Something went wrong. Please try again.");
+          setTimeout(() => {
+            popup.classList.remove("show");
+          }, 3000);
+
+          form.reset();
+          closeModal(); // Only if this function behaves well on mobile
+        }, function (error) {
+          console.log(error);
+          alert("Oops! Something went wrong. Please try again.");
+        });
     });
+  }
 });
+
 
 
