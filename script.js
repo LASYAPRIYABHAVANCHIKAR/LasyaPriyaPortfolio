@@ -129,3 +129,29 @@ particlesJS("particles-js", {
 },
 "retina_detect": true
 });
+// Initialize EmailJS
+(function () {
+  emailjs.init("16OKrJJhCbc7Gyc4d"); // Your Public Key
+})();
+
+document.getElementById("resumeForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm('service_odtdaoy', 'template_oo881rf', this) // Use your selected template
+    .then(function () {
+      const popup = document.getElementById("successPopup");
+      popup.classList.add("show");
+
+      setTimeout(() => {
+        popup.classList.remove("show");
+      }, 3000);
+
+      e.target.reset();
+      closeModal();
+    }, function (error) {
+      console.log(error);
+      alert("Oops! Something went wrong. Please try again.");
+    });
+});
+
+

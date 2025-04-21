@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lasya Priya Bhavanchikar | Portfolio</title>
+  <title>Lasya Priya Bhavanchikar| Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,7 @@
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 </head>
 <body>
@@ -38,7 +39,7 @@
   <section id="landing">
     <div class="landing-content">
       <h1>Hello, I'm</h1>
-      <h2 id="dynamic-name">Lasya Priya Bhavanchikar</h2>
+      <h2 id="dynamic-name">Lasya Priya-Bhavanchikar</h2>
       <h3 id="role-text"></h3>
       <div class="button-group">
         <a href="#contact" class="btn">Hire Me</a>
@@ -371,17 +372,16 @@ Currently seeking opportunities to contribute to impactful teams, build scalable
   
 
 <!-- Hidden form modal -->
+<!-- Resume Request Modal -->
 <div id="resumeModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
     <h3>Request Resume</h3>
-    <form action="https://formsubmit.co/lasyapriyafsd@gmail.com" method="POST">
+    <form id="resumeForm">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Why would you like my resume?" required></textarea>
-      <input type="hidden" name="_captcha" value="false" />
 
-      <!-- New button group -->
       <div class="modal-button-group">
         <button type="submit">Send Request</button>
         <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
@@ -390,7 +390,10 @@ Currently seeking opportunities to contribute to impactful teams, build scalable
   </div>
 </div>
 
-
+<!-- Popup Message -->
+<div id="successPopup" class="popup">
+  🎉 Yay! Thanks for reaching out. Lasya Priya will reply soon!
+</div>
 
 
   <!-- Footer -->

@@ -784,15 +784,7 @@ footer strong {
 }
 
 /* ======== Particle Background ======== */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
+
 .resume-form {
   display: flex;
   flex-direction: column;
@@ -915,5 +907,35 @@ footer strong {
   z-index: 0;
   pointer-events: none;
 }
+.popup {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: papayawhip;
+  color: #000;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.popup.show {
+  display: block;
+}
+@media (max-width: 480px) {
+  .popup {
+    top: 15px;
+    right: 10px;
+    left: auto;
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+
 
 
