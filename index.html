@@ -449,6 +449,30 @@ Currently seeking opportunities to contribute to impactful teams, build scalable
     },
     "retina_detect": true
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("16OKrJJhCbc7Gyc4d");
+  const form = document.getElementById("resumeForm");
+  const popup = document.getElementById("successPopup");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm('service_odtdaoy', 'template_oo881rf', this)
+        .then(function () {
+          popup.classList.add("show");
+          setTimeout(() => popup.classList.remove("show"), 3000);
+          form.reset();
+          closeModal();
+        }, function (error) {
+          console.error(error);
+          alert("Oops! Something went wrong.");
+        });
+    });
+  }
+});
+
 </script>
 
 
