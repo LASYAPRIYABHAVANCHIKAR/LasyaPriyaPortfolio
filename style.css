@@ -5,6 +5,9 @@
 /* NAVBAR */
 /* NAVBAR - Clean and Centered */
 /* ======= NAVBAR with Black Glass Background ======= */
+/* ============ NAVBAR STYLES ============ */
+
+/* Fixed Glass Navbar */
 header {
   position: fixed;
   top: 0;
@@ -15,6 +18,7 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: center;
@@ -22,6 +26,7 @@ header {
   padding: 0.5rem 1rem;
 }
 
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -35,13 +40,14 @@ header {
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #f58f7c;
 }
 
-/* Base styles already applied — we’re just updating for mobile */
+/* Hamburger Icon */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -53,29 +59,38 @@ header {
   z-index: 1001;
 }
 
+/* ============ MOBILE STYLES ============ */
 @media screen and (max-width: 768px) {
+  /* Show hamburger on mobile */
   .menu-toggle {
     display: block;
   }
 
+  /* Hide nav links by default on mobile */
   .nav-links {
     display: none;
     flex-direction: column;
     align-items: center;
-    background: rgba(0, 0, 0, 0.9); /* Keeps black background for mobile too */
+    background: rgba(0, 0, 0, 0.95);
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 60px; /* Adjust if your header height differs */
     left: 0;
     padding: 1.5rem 0;
-    z-index: 999;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
 
+  /* Show menu when active */
   .nav-links.active {
     display: flex;
   }
-}
 
+  /* Mobile nav link spacing */
+  .nav-links li {
+    margin: 1rem 0;
+  }
+}
 
 
 
@@ -935,6 +950,54 @@ footer strong {
     padding: 0.8rem 1rem;
   }
 }
+/* ========================
+   🎉 Universal Popup Styles
+   ======================== */
+   #successPopup {
+    display: none;
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
+    background-color: #e0f8e0;
+    color: #333;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #successPopup.show {
+    display: block;
+  }
+  
+  /* ========================
+     📱 Mobile Optimization
+     ======================== */
+  @media (max-width: 600px) {
+    #successPopup {
+      top: 1rem;
+      right: auto;
+      left: 1rem;
+      max-width: calc(100% - 2rem);
+      width: auto;
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 0.9rem 1.2rem;
+    }
+  }
+  #successPopup {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  
+  #successPopup.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
 
 
 

@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeRoleText();
 });
-
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
 function showTab(tabName) {
 document.querySelectorAll('.tab-box').forEach(tab => tab.classList.add('hidden'));
 document.getElementById(tabName).classList.remove('hidden');
@@ -147,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           setTimeout(() => {
             popup.classList.remove("show");
-          }, 3000);
+          }, 5000);
 
           form.reset();
           closeModal(); // Only if this function behaves well on mobile
