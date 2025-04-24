@@ -161,6 +161,81 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// ✅ 1. Scroll-triggered section animation (like for landing)
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedSections = document.querySelectorAll(".animate-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-active");
+        observer.unobserve(entry.target); // Optional: only animate once
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  animatedSections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+// ✅ 2. Typewriter animation for About section (with scroll trigger)
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutParagraphs = [
+    `I’m Lasya Priya, a passionate and hands-on Full Stack Developer with a background in Electronics & Communication and a Master’s in Computer Science from Pace University, NYC.`,
+    `I specialize in building web applications that are not only functional but also intuitive and performance-driven.`,
+    `With experience in Java, Spring Boot, React.js, MongoDB, SQL, and automated testing using Cypress, I bring both logic and creativity to the table.`,
+    `I believe in clean code, clear UI, and continuous learning. My work blends backend efficiency with frontend elegance — always with the end-user in mind.`,
+    `Currently seeking opportunities to contribute to impactful teams, build scalable solutions, and grow as a tech leader in a collaborative environment.`
+  ];
+
+  const typewriterTarget = document.getElementById("typewriterText");
+  if (!typewriterTarget) return;
+
+  let paraIndex = 0;
+  let charIndex = 0;
+
+  function typeParagraph() {
+    if (paraIndex >= aboutParagraphs.length) return;
+
+    const currentPara = aboutParagraphs[paraIndex];
+
+    if (charIndex === 0) {
+      const p = document.createElement("p");
+      p.classList.add("about-text");
+      typewriterTarget.appendChild(p);
+    }
+
+    const currentP = typewriterTarget.lastElementChild;
+    currentP.innerHTML += currentPara.charAt(charIndex);
+    charIndex++;
+
+    if (charIndex < currentPara.length) {
+      setTimeout(typeParagraph, 20);
+    } else {
+      charIndex = 0;
+      paraIndex++;
+      setTimeout(typeParagraph, 400);
+    }
+  }
+
+  // 🚀 Trigger typewriter on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        typeParagraph();
+        observer.unobserve(entry.target); // Only run once
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(typewriterTarget);
+});
+
 
 
 
