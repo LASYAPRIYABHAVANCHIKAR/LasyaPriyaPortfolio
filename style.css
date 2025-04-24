@@ -1062,6 +1062,33 @@ footer strong {
     animation: fadeIn 1.2s ease-in-out forwards;
     animation-delay: var(--delay, 0s);
   }
+  /*Animation for projects section*/
+  @keyframes bounceFadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+    }
+    60% {
+      transform: translateY(-10px) scale(1.02);
+    }
+    80% {
+      transform: translateY(5px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-project {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .animate-project.animate-active {
+    animation: bounceFadeUp 1.2s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+  }
   
   
 

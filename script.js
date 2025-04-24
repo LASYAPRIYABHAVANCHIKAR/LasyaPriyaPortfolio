@@ -254,6 +254,23 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(card);
   });
 });
+/*For Projects*/
+document.addEventListener("DOMContentLoaded", () => {
+  const projectCards = document.querySelectorAll(".animate-project");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-active");
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  projectCards.forEach(card => observer.observe(card));
+});
 
 
 
