@@ -288,6 +288,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   eduGroup.forEach(el => observer.observe(el));
 });
+/*For artwork*/
+document.addEventListener("DOMContentLoaded", () => {
+  const lpImages = document.querySelectorAll(".animate-lp");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-active");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  lpImages.forEach(img => observer.observe(img));
+});
 
 
 
