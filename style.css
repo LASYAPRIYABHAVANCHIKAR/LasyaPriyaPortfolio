@@ -1089,6 +1089,27 @@ footer strong {
     animation: bounceFadeUp 1.2s ease-out forwards;
     animation-delay: var(--delay, 0s);
   }
+  /*Animations for certifications and education tab*/
+  @keyframes fadeUpSmooth {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-edu {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .animate-edu.animate-active {
+    animation: fadeUpSmooth 1s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+  }
   
   
 
