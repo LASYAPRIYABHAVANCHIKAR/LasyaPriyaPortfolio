@@ -102,7 +102,7 @@ header {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
   color: #f5f5f5;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -368,9 +368,15 @@ h2 {
   border-radius: 16px;
   padding: 2rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
 }
+.cert-tab {
+  border-left: 4px solid #f58f7c;
+}
+.edu-tab {
+  border-left: 4px solid #a259ff;
+}
+
 
 .cert-links, .edu-links {
   list-style: none;
@@ -503,6 +509,7 @@ h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
+
 .project-summary-glass:hover {
   transform: scale(1.02);
   background: rgba(255, 255, 255, 0.12);
@@ -528,6 +535,18 @@ h2 {
   box-shadow: 0 0 12px rgba(0,0,0,0.2);
   position: relative;
 }
+/* Summary Cards (visible by default) */
+.project1-summary {
+  border-left: 4px solid #f687b3;
+}
+
+.project2-summary {
+  border-left: 4px solid #f6e05e;
+}
+.project3-summary {
+  border-left: 4px solid #a259ff;
+}
+
 
 .project-glass-card h3 {
   color: #00f7ff;
@@ -712,12 +731,23 @@ h2 {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   color: #fff;
 }
+.timeline1 {
+  border-left: 4px solid papayawhip;
+}
+
+.timeline2 {
+  border-left: 4px solid greenyellow;
+}
+
+.timeline3 {
+  border-left: 4px solid #a259ff;
+}
+
 
 .content h3 {
   margin-top: 0;
