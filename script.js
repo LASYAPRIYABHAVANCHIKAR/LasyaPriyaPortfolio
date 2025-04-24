@@ -235,6 +235,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(typewriterTarget);
 });
+/*For Skills*/
+document.addEventListener("DOMContentLoaded", () => {
+  const skillCards = document.querySelectorAll(".animate-skill");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-active");
+        observer.unobserve(entry.target); // Remove if you want to animate only once
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  skillCards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
+
 
 
 

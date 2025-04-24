@@ -1047,6 +1047,22 @@ footer strong {
   .animate-active {
     animation: fadeSlideUp 0.9s ease-out forwards;
   }
+
+  /* Animation for skills section */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  .animate-skill {
+    opacity: 0;
+  }
+  
+  .animate-skill.animate-active {
+    animation: fadeIn 1.2s ease-in-out forwards;
+    animation-delay: var(--delay, 0s);
+  }
+  
   
 
 
