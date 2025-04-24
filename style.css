@@ -1138,6 +1138,46 @@ footer strong {
     animation-delay: var(--delay, 0s);
     opacity: 1;
   }
+  /*For timeline*/
+  @keyframes swingFlagLeft {
+    0% { transform: rotateZ(1.5deg); }
+    50% { transform: rotateZ(-1.5deg); }
+    100% { transform: rotateZ(1.5deg); }
+  }
+  
+  @keyframes swingFlagRight {
+    0% { transform: rotateZ(-1.5deg); }
+    50% { transform: rotateZ(1.5deg); }
+    100% { transform: rotateZ(-1.5deg); }
+  }
+  
+  /* Common animation style */
+  .swing-flag .content {
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: top left;
+  }
+  
+  /* Left side flags */
+  .timeline-container.left.swing-flag .content {
+    animation-name: swingFlagLeft;
+  }
+  
+  /* Right side flags */
+  .timeline-container.right.swing-flag .content {
+    animation-name: swingFlagRight;
+    transform-origin: top right;
+  }
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  
+  .swing-flag .content {
+    animation: floatUpDown 3s ease-in-out infinite, 
+               swingFlagLeft 3s ease-in-out infinite; /* overridden per side */
+  }
   
   
 
