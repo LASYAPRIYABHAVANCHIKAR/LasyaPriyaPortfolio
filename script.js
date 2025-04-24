@@ -305,6 +305,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   lpImages.forEach(img => observer.observe(img));
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("background-melody");
+  const toggleBtn = document.getElementById("toggle-melody");
+
+  // ⏩ Skip slow intro & set soft volume
+  audio.currentTime = 25;
+  audio.volume = 0.08;
+
+  toggleBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play()
+        .then(() => {
+          toggleBtn.textContent = "🔇";
+        })
+        .catch(err => {
+          console.warn("Autoplay blocked or failed:", err);
+        });
+    } else {
+      audio.pause();
+      toggleBtn.textContent = "🔊";
+    }
+  });
+});
+
 
 
 

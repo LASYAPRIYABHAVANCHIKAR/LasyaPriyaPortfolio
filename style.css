@@ -1178,6 +1178,31 @@ footer strong {
     animation: floatUpDown 3s ease-in-out infinite, 
                swingFlagLeft 3s ease-in-out infinite; /* overridden per side */
   }
+  /*bgm*/
+  .melody-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(0, 247, 255, 0.12);
+    color: #00f7ff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 9999;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .melody-btn:hover {
+    background-color: #00f7ff;
+    color: black;
+    transform: scale(1.05);
+  }
+  
   
   
 
